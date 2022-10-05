@@ -1,7 +1,4 @@
 
-from multiprocessing.spawn import import_main_path
-from pdb import pm
-from resource import prlimit
 
 
 import sys,random
@@ -26,37 +23,37 @@ while True:
     elif pmove=='s':
         print('scissor vs.....')
 
-    c=''    
+    computerMove=''    
     random_number=random.randint(1,3)
     if random_number==1:
-        c=='r'
+        computerMove=='r'
         print('rock') 
     elif random_number==2:
-        c=='p'
+        computerMove=='p'
         print('paper' )
     elif random_number==3:
-        c=='s'         
+        computerMove=='s'         
         print('scissor')
 
-    if pmove==c:
+    if pmove==computerMove:
         print('Its a tie')
         ties=ties+1
-    elif pmove=='r' and c=='s':
+    elif pmove=='r' and computerMove=='s':
         print('you win')
         wins=wins+1
-    elif pmove=='s' and c=='p':
+    elif pmove=='s' and computerMove=='p':
         print('you win')
         wins=wins+1
-    elif pmove=='p' and c=='r':
+    elif pmove=='p' and computerMove=='r':
         print('you win')
         wins=wins+1
-    elif pmove=='s' and c=='r':
+    elif pmove=='s' and computerMove=='r':
         print('you loss')
         losses=losses+1
-    elif pmove=='r' and c=='p':
+    elif pmove=='r' and computerMove=='p':
         print('you loss')
         losses=losses+1
-    elif pmove=='p' and c=='s':
+    elif pmove=='p' and computerMove=='s':
         print('you loss')
         losses=losses+1
                      
